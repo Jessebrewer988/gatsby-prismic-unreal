@@ -5,6 +5,19 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    'gatsby-plugin-styled-components',
+    {
+      resolve: "@prismicio/gatsby-source-prismic-graphql",
+      options: {
+        repositoryName: "brew-unreal-landing",
+        pages: [{
+          type: 'Page',
+          match: '/:uid',
+          path: '/',
+          component: require.resolve('./src/templates/page.js')
+        }]
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,10 +34,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#333`,
+        theme_color: `#eee`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/UElogo.jpg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
