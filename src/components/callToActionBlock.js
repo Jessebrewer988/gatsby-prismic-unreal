@@ -22,6 +22,11 @@ const CallToActionBlockWrapper = styled.div`
       max-width: 200px;
       margin: 0;
     }
+
+    img.contact {
+      max-width: 400px;
+      margin: auto auto;
+    }
   }
 `
 
@@ -56,13 +61,14 @@ const CallToActionBlock = ({
   buttonDestination, 
   featuredImage
 }) => {
+  console.log('buttonLabel', buttonLabel);
   return (
     <CallToActionBlockWrapper>
       <RichText render={title} />
       <div className="call-content">
         <RichText render={content} />
         <div className="featured-image-wrapper">
-          <img src={featuredImage} alt="Featured"/>
+          {buttonLabel.includes('Contact')? <img className="contact" src={featuredImage} alt="Featured"/>: <img src={featuredImage} alt="Featured"/>}
         </div>
       </div>
       <Button>

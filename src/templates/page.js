@@ -60,6 +60,7 @@ const Page = (props) => {
   const { page_title } = pageData;
   const { content } = pageData;
   const { body } = pageData;
+  console.log('body', body);
   return (
     <Layout>
       <PageWrapper>
