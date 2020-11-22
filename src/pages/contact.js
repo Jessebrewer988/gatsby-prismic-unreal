@@ -70,7 +70,7 @@ const Contact = ( props ) => {
       <ContentWrapper>
         <RichText render={form_data.form_title} />
         <RichText render={form_data.form_description} />
-        <Form onSubmit={e => e.preventDefault()}
+        <Form
           name="contact"
           method="POST"
           data-netlify="true"

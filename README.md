@@ -1,7 +1,7 @@
 #Gatsby - Prismic - React - GraphQL
 
 
-## to Run
+## To Run
 1. `git clone` this repo
 2. Run `npm install` in the directory from your terminal
 3. Run `npm start` in your terminal to start the app on localhost:8000
